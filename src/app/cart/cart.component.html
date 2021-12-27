@@ -1,0 +1,29 @@
+<div class="main">
+    <div class="container " *ngFor="let sp of arrListSp">
+        <diV><h4>sản phẩm</h4></diV>
+        <div class="name">
+            <p>{{sp.name}}</p>
+        </div>
+        <div>
+            <div class="price">{{sp.price}}</div>
+            <div class="btn-cart" (click)="toCart(sp);"><p>Buy</p></div>
+        </div>
+    </div>
+</div>
+
+
+<div class="cart">
+    <div class="main__cart" *ngFor="let spBuyed of arrCart">
+        <div class="title"><h4>Giỏ Hàng</h4></div>
+        <div class="name">
+            <p>{{spBuyed.name}}</p>
+        </div>
+        <div>
+            <div class="price">{{spBuyed.price}}</div>
+        </div>
+        <button (click)="removespBuyed(spBuyed.id);">xoá</button>
+    </div>
+    <div class="sum__cart">tổng:{{sum}}</div>
+    <div class="btn-cart" ><p>ok</p></div>
+</div>
+

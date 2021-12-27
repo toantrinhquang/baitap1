@@ -1,0 +1,33 @@
+<div class="form-login">
+    <label for="login-username">Ten dang nhap</label>
+    <input type="text" name="login-username" placeholder="Username">
+    <br>
+    <label for="login-password">Mat khau</label>
+    <input type="password" name="login-password" placeholder="Password">
+    <br>
+    <button (click)="login();">Dang nhap</button>
+</div>
+
+
+
+<div class="form-registration">
+    <div>
+        <input type="text" placeholder="Username" [(ngModel)]="newUser">
+        <br>
+        <input type="password" placeholder="Password" [(ngModel)]="newPass">
+        <br>
+        <button (click)="addUser();">ADD</button>
+    </div>
+
+    <div *ngFor="let user of arrlistUser" class="form-list-user">
+        <tr class="form-group row-1">
+            <th class="col-user">User:</th>
+            <th class="main-col-user">{{user.username}}</th>
+        </tr>
+        <tr>
+            <th>id:</th>
+            <th>{{user.id}}</th>
+        </tr>
+
+    </div>
+</div>
